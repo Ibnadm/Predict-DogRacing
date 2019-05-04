@@ -1,0 +1,15 @@
+import csv
+
+with open('horses1.txt','r') as csv_file:
+  csv_reader = csv.DictReader(csv_file)
+
+  with open('clean_horses.txt','w') as new_file:
+    #begins cleans data and writes it to new txt-file.
+    fieldnames = ["previous_margin","position","position_again","position_two","bf_odds","condition","weather","barrier","blinkers","emergency","handicap_weight","penalty","prize_money","sex","age","last_twenty_starts","class_level","days_since_last_run","runs_since_spell","overall_starts","overall_wins","overall_places","track_starts","track_wins","track_places","firm_starts","firm_wins","firm_places","good_starts","good_wins","good_places","dead_starts","dead_wins","dead_places","slow_starts","slow_wins","slow_places","soft_starts","soft_wins","soft_places","heavy_starts","heavy_wins","heavy_places","distance_starts","distance_wins","distance_places","class_same_starts","class_same_wins","class_same_places","class_stronger_starts","class_stronger_wins","class_stronger_places","first_up_starts","first_up_wins","first_up_places","second_up_starts","second_up_wins","second_up_places","track_distance_starts","track_distance_wins","track_distance_places"] #values kept based on availability, relevance, and independence from other preestablished metrics
+
+    csv_writer = csv.DictWriter(new_file,fieldnames=fieldnames,extrasaction='ignore')
+
+    csv_writer.writeheader()
+
+    for line in csv_reader:
+      csv_writer.writerow(line)
