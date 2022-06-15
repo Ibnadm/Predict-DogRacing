@@ -1,2 +1,2 @@
 # HorseRacing
-Analysis of a Kaggle dataset on horse racing, utilizing Python and the Pandas, Matplotlib, Scipy, and SciKit-Learn libraries.
+Analysis of a Kaggle [horse racing dataset](https://www.kaggle.com/datasets/donw385/horses), utilizing Python and the Pandas, Matplotlib, Scipy, and SciKit-Learn libraries.
